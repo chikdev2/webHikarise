@@ -3,97 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hikarise - Indonesian Agency</title>
-  <style>
-    /* Common styles for both versions */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    
-    .navbar {
-      padding: 10px;
-      background-color: #333;
-      color: white;
-    }
-
-    /* Styles for mobile version */
-    @media (max-width: 768px) {
-      .mobile-title {
-        text-align: center;
-      }
-
-      .mobile-dropdown {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .dropdown-btn {
-        background-color: #333;
-        border: none;
-        color: white;
-        cursor: pointer;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        z-index: 1;
-      }
-    }
-
-    /* Styles for desktop version */
-    @media (min-width: 769px) {
-      .desktop-title {
-        text-align: center;
-      }
-
-      .desktop-navigation {
-        text-align: right;
-      }
-    }
-  </style>
+  <title>Hikarise (光せ) - Indonesian Agency</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="navbar">
-    <!-- Mobile version -->
-    <div class="mobile-dropdown">
-      <button class="dropdown-btn" id="mobile-menu">Menu</button>
-      <div class="dropdown-content">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-      </div>
+    <div class="logo">
+      <span class="logo-text">Hikarise (光せ) - Indonesian Agency</span>
     </div>
-    <div class="mobile-title">
-      <span>Hikarise ( 光せ ) - Indonesian Agency</span>
-    </div>
-    
-    <!-- Desktop version -->
-    <div class="desktop-title">
-      <span>Hikarise ( 光せ ) - Indonesian Agency</span>
-    </div>
-    <div class="desktop-navigation">
-      <a href="#">Home</a>
-      <a href="#">About Us</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </div>
+    <ul class="menu">
+      <li class="menu-item"><a href="#">Talent</a></li>
+      <li class="menu-item"><a href="#">Staff</a></li>
+      <li class="menu-item"><a href="#">Event</a></li>
+      <li class="menu-item"><a href="#">News</a></li>
+      <li class="menu-item"><a href="#">Schedule</a></li>
+    </ul>
   </nav>
-
-  <script>
-    document.getElementById("mobile-menu").addEventListener("click", function() {
-      var dropdownContent = document.querySelector(".dropdown-content");
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
