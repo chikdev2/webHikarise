@@ -9,6 +9,7 @@ body{
 }
 /*Bagian Navbar*/
 nav{
+  display: flex;
   background-color: white;
   height: 80px;
 }
