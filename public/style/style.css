@@ -29,6 +29,10 @@ nav ul li a{
   border-radius: 13px;
   font-size: 17px;
 }
+.menu{
+  margin: 8px;
+  display: flex;
+}
 /*End Navbar*/
 /*Bagian Footer*/
 
