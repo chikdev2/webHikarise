@@ -1,68 +1,66 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
+/* CSS for Desktop */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  padding: 10px 20px;
   color: white;
+  padding: 10px 20px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo-text {
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-item {
-  margin-right: 20px;
-  transition: transform 0.2s;
-}
-
-.menu-item:last-child {
-  margin-right: 0;
-}
-
-.menu-item a {
+.logo a {
+  font-size: 20px;
   text-decoration: none;
   color: white;
 }
 
-/* Hover effect for desktop */
-.menu-item:hover {
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.menu a:hover {
   transform: scale(1.1);
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .menu {
+/* CSS for Mobile */
+@media screen and (max-width: 768px) {
+  .logo a {
+    font-size: 16px;
+  }
+
+  .menu-button {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .menu.active .menu-button {
+    display: block;
+  }
+
+  .menu ul {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    background-color: #333;
+    padding: 10px;
   }
 
-  .menu-item {
+  .menu.active ul {
+    display: flex;
+  }
+
+  .menu li {
     margin: 5px 0;
-    text-align: center;
-  }
-
-  /* Hover effect for mobile */
-  .menu-item:hover {
-    transform: scale(1.1);
   }
 }
